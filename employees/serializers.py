@@ -13,3 +13,11 @@ class EmployesSerializers(serializers.Serializer):
     emp_designation = serializers.ChoiceField(choices=employees_constants.STREAM_CHOICES)
     emp_datajoing = serializers.DateField()
     emp_project = serializers.CharField(max_length=49)
+    
+    
+    
+class ProjectSerializers(serializers.Serializer):
+    pro_name = serializers.CharField(max_length=30)
+    pro_designation = serializers.ChoiceField(choices=employees_constants.STREAM_CHOICES)
+    pro_datajoing = serializers.DateField()
+    pro_project = serializers.CharField(max_length=49)

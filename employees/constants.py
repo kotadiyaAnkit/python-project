@@ -7,3 +7,8 @@ STREAM_CHOICES = (
     (BACKEND_DEVELOPER, BACKEND_DEVELOPER),
     (FULLSTACK_DEVELOPER, FULLSTACK_DEVELOPER)
 )
+
+STREAM_CHOICES = [
+    ('DEV', 'Developer'),
+    ('QA', 'Quality Analyst'),
+]
