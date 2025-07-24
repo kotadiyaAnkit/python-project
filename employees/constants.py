@@ -11,8 +11,10 @@ STREAM_CHOICES = (
 
 
 
+
 PROJECT_CHOICES = [
     ('developer', 'Developer'),
     ('manager', 'Manager'),
     ('designer', 'Designer'),
 ]
+

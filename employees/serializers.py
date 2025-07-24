@@ -21,3 +21,6 @@ class ProjectSerializers(serializers.Serializer):
     pro_start_date = serializers.DateField()
     pro_client_name = serializers.CharField()
     pro_designation =serializers.ChoiceField(choices=employees_constants.PROJECT_CHOICES)
+
+    emp_project = serializers.CharField(max_length=49)
+
