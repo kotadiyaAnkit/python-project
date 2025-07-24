@@ -1,5 +1,4 @@
 # from django.db import models
-
 import uuid
 from django.db import models
 from employees import constants as employees_constants
@@ -10,13 +9,21 @@ class BaseModel(models.Model):
     is_deleted = models.BooleanField(default=False)
 
 class Project(BaseModel):
-    name = models.CharField(max_length=100)
-    start_date = models.DateField()
-    client_name = models.CharField(max_length=100)
-    
+    pro_name = models.CharField(max_length=100)
+    pro_start_date = models.DateField()
+    pro_client_name = models.CharField(max_length=100)
+    pro_designation = models.CharField(max_length=25,choices=employees_constants.PROJECT_CHOICES, default="Developer")
 
     def __str__(self):
-        return self.name
+        return self.pro_name  # Changed from self.name
+
+    def Project_details(self):
+        return {
+            "pro_name": self.pro_name,
+            "pro_start_date": self.pro_start_date,
+            "pro_client_name": self.pro_client_name,
+            "pro_desifnation" : self.pro_designation
+        }
 
 class EmployeModel(BaseModel):
     emp_id = models.UUIDField(default=uuid.uuid4, db_index=True)

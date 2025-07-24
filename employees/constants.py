@@ -8,7 +8,11 @@ STREAM_CHOICES = (
     (FULLSTACK_DEVELOPER, FULLSTACK_DEVELOPER)
 )
 
-STREAM_CHOICES = [
-    ('DEV', 'Developer'),
-    ('QA', 'Quality Analyst'),
+
+
+
+PROJECT_CHOICES = [
+    ('developer', 'Developer'),
+    ('manager', 'Manager'),
+    ('designer', 'Designer'),
 ]

@@ -93,18 +93,17 @@ class ProjectView(APIView):
         if not serializers.is_valid():
             return core_utils.create_response(serializers.errors, 400)
 
-        emp_name = serializers.validated_data.get('emp_name')
-        emp_designation = serializers.validated_data.get('emp_designation')
-        emp_datajoing = serializers.validated_data.get('emp_datajoing')
-        emp_project = serializers.validated_data.get('emp_project')
+        pro_name = serializers.validated_data.get('pro_name')
+        pro_start_date = serializers.validated_data.get('pro_start_date')
+        pro_client_name = serializers.validated_data.get('pro_client_name')
+        pro_designation = serializers.validated_data.get('pro_designation')  
         
         core_models.Project.objects.create(
-            # emp_id =emp_id,
-            emp_name=emp_name,
-            emp_designation=emp_designation,
-            emp_datajoing = emp_datajoing,
-            emp_project=emp_project
+            pro_name=pro_name,
+            pro_start_date=pro_start_date,
+            pro_client_name = pro_client_name,
+            pro_designation = pro_designation
         )
         
-        return core_utils.create_response("Employees Data Saved SuccessFully", 200)
+        return core_utils.create_response(" Data Saved SuccessFully", 200)
     
