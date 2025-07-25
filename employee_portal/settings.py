@@ -74,22 +74,11 @@ WSGI_APPLICATION = 'employee_portal.wsgi.application'
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
 DATABASES = {
-    # 'default': 
-    #     
-
-    #     'NAME': 'employees',
-    #     'USER': 'postgres',
-    #     'PASSWORD':'12345',
-    #     'HOST':'localhost',
-    #     'POST': 5432
-'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'your_db_name',
-        'USER': 'admin',
-        'PASSWORD': 'admin',
-        'HOST': '127.0.0.1',
-        'PORT': '5432',
-
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
+}
 
 
 
